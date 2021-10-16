@@ -7,4 +7,4 @@ FROM node:12.2.0-alpine as builder
 RUN npm run build
 
 EXPOSE 8081
-CMD["npm","run","start"]
+#CMD["npm","run","start"]
