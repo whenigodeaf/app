@@ -8,7 +8,7 @@
     "build": "tsc",
     "dev": "ts-node -r tsconfig-paths/register ./src/server.ts",
     "devmon": "nodemon -x ts-node -r tsconfig-paths/register ./src/server.ts",
-    "start": "node -r ./tsconfig-paths-bootstrap.js ./dist/backend/core-api/src/server.js",
+    "start": "node -r ./dist/backend/core-api/src/server.js",
     "prod": "npm run build && npm run start"
   },
   "keywords": [
@@ -25,7 +25,7 @@
     "express": "^4.17.1",
     "http-status-codes": "^2.1.4",
     "mongodb": "^3.6.3",
-    "mongoose": "5.10.18",
+    "mongoose": "5.10.18"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
