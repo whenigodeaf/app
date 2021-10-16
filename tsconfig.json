@@ -1,5 +1,40 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-  }
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "pretty": true,
+        "sourceMap": true,
+        "target": "es6",
+        "outDir": "./dist",
+        "baseUrl": "./src",
+        "rootDir": "../..",
+        "paths": {
+            "@dto/*": ["dto/*"],
+            "@httphandler": ["HttpHandler/index"],
+            "@types": ["types/index"],
+            "@model": ["model/index"],
+            "@shared": ["../../../shared/index"],
+            "@shared/dto": ["../../../shared/DTO/public-api"],
+            "@shared/enum": ["../../../shared/enum/public-api"],
+            "@packages/healthcheck": ["packages/healthcheck/index"],
+            "@packages/httpexamples": ["packages/httpexamples/index"],
+            "@packages/softpro": ["packages/softpro/index"],
+            "@packages/ml-docs-api": ["packages/ml-docs-api/index"],
+            "@packages/consumer-data-property": ["packages/consumer-data-property/index"],
+            "@packages/mortgageinsights": ["packages/mortgageinsights/index"],
+            "@packages/pro-referral": ["packages/pro-referral/index"],
+            "@packages/company-admin": ["packages/company-admin/index"],
+            "@packages/service-request": ["packages/service-request/index"],
+            "@packages/maintenance-task": ["packages/maintenance-task/index"],
+            "@packages/insuranceinsights": ["packages/insuranceinsights/index"]
+        },
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
