@@ -2,18 +2,42 @@
   "name": "BeMore",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "ts-node server.ts"
+    "dev": "ts-node -r tsconfig-paths/register ./src/server.ts",
+    "devmon": "nodemon -x ts-node -r tsconfig-paths/register ./src/server.ts",
+    "start": "node -r ./tsconfig-paths-bootstrap.js ./dist/backend/core-api/src/server.js",
+    "prod": "npm run build && npm run start"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Susan",
+    "Malmrose"
+  ],
+  "author": "Susan Malmrose",
   "license": "ISC",
   "dependencies": {
+    "@typegoose/typegoose": "^7.4.4",
+    "app-root-path": "^3.0.0",
+    "async": "^3.1.1",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongodb": "^4.1.3"
+    "http-status-codes": "^2.1.4",
+    "mongodb": "^3.6.3",
+    "mongoose": "5.10.18",
+  },
+  "devDependencies": {
+    "-": "0.0.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.10.1",
+    "@types/node": "^13.7.0",
+    "@types/semver": "^7.3.4",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "3.9.7"
   }
 }
